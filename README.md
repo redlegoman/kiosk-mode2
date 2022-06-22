@@ -1,4 +1,4 @@
-# kiosk-mode
+# kiosk-mode2
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-yellow.svg)](https://github.com/custom-components/hacs) [![hacs_badge](https://img.shields.io/badge/Buy-Me%20a%20Coffee-critical)](https://www.buymeacoffee.com/FgwNR2l)
 
@@ -25,7 +25,7 @@ Non-YAML mode, or Storage Mode, users can find resources in their sidebar under 
 
 ```yaml
 resources:
-  - url: /hacsfiles/kiosk-mode/kiosk-mode.js
+  - url: /hacsfiles/kiosk-mode2/kiosk-mode2.js
     type: module
 ```
 <br>
@@ -35,7 +35,7 @@ resources:
   <summary><b>Manual installation</b></summary>
 <br>
   
-* Download [kiosk-mode.js](https://github.com/matt8707/kiosk-mode/releases/latest) from the latest release and place it in your `www` folder
+* Download [kiosk-mode2.js](https://github.com/matt8707/kiosk-mode2/releases/latest) from the latest release and place it in your `www` folder
 * Add the resource below
 
 YAML mode users add it to their [configuration.yaml](https://www.home-assistant.io/lovelace/dashboards-and-views/#adding-more-dashboards-with-yaml) file.
@@ -44,7 +44,7 @@ Non-YAML mode, or Storage Mode, users can find resources in their sidebar under 
 ```yaml
 resources:
   # You'll need to update the version number at the end of the url after every update.
-  - url: /local/kiosk-mode.js?v=1.2.1
+  - url: /local/kiosk-mode2.js?v=1.2.1
     type: module
 ```
 <br>
@@ -55,7 +55,7 @@ resources:
 ## Important Info
 
 * If you need to disable Kiosk-Mode temporarily add `?disable_km` to the end of your URL.
-* Config is placed in the root of your Lovelace config: `kiosk_mode:` should not be indented & is per dashboard.
+* Config is placed in the root of your Lovelace config: `kiosk_mode2:` should not be indented & is per dashboard.
 * If you want the same settings on other dashboards you'll need to repeat the config on those dashboards as well.
 * Refresh page after config changes.
 
@@ -74,12 +74,12 @@ resources:
 ## Simple config example
 
 ```
-kiosk_mode:
+kiosk_mode2:
   hide_header: true
   
 views:
 ```
-*Note: `views:` is added in the example above to show where `kiosk_mode:` should be placed in your Lovelace config*<br><br>
+*Note: `views:` is added in the example above to show where `kiosk_mode2:` should be placed in your Lovelace config*<br><br>
 
 ## Conditional Lovelace Config
 Contitional configs take priority and if a condition matches all other config options/methods are ignored.
@@ -90,7 +90,7 @@ Sets the config for every admin user.<br>
 *Overwritten by user_settings, mobile_settings, and entity_settings ( unless one of the ignore options is used ).*<br>
 
 ```
-kiosk_mode:
+kiosk_mode2:
   admin_settings:
     hide_header: true
 ```
@@ -101,7 +101,7 @@ Sets the config for every regular user.<br>
 *Overwritten by user_settings, mobile_settings, and entity_settings ( unless one of the ignore options is used ).*<br>
 
 ```
-kiosk_mode:
+kiosk_mode2:
   non_admin_settings:
     hide_header: true
     ignore_entity_settings: true
@@ -113,7 +113,7 @@ Sets the config for specific users. **This uses a user's name, not their usernam
 *Overwritten by mobile_settings, and entity_settings ( unless one of the ignore options is used ).*<br>
 
 ```
-kiosk_mode:
+kiosk_mode2:
   user_settings:
     - users:
         - "ryan meek"
@@ -131,7 +131,7 @@ Sets the config for mobile devices. The default breakpoint is 812px, which can b
 *Overwritten by entity_settings, unless `ignore_entity_settings` is used, can be ignored with `ignore_mobile_settings`.*<br>
 
 ```
-kiosk_mode:
+kiosk_mode2:
   mobile_settings:
     hide_header: true
     ignore_entity_settings: true
@@ -145,7 +145,7 @@ Dynamically change config on any entity's state. Under `entity:` list the entity
 
 *Any condition that doesn't match will then fall back to previous configurations if another "false" entity condition hasn't also been set (see the 2nd example).*
 ```
-kiosk_mode:
+kiosk_mode2:
   entity_settings:
     - entity:
         input_boolean.hide_sidebar: 'on'
@@ -159,7 +159,7 @@ kiosk_mode:
 ```
 
 ```
-kiosk_mode:
+kiosk_mode2:
   entity_settings:
     # hide_sidebar has both true and false conditions to be a true override.
     - entity:
